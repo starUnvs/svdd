@@ -61,11 +61,11 @@ def adjust_param():
 
     # 数据预处理
     if type_num == 0:
-        train_data = load_data.load_train_data('iris.data', 0, 30, dim=dim)
+        train_data = load_data.load_train_data('../data/iris.data', 0, 30, dim=dim)
         test_data, correct_label = load_data.load_test_data(
             'iris.data', type_num, 30, 150, dim=dim)
     elif type_num == 1:
-        train_data = load_data.load_train_data('iris.data', 50, 80)
+        train_data = load_data.load_train_data('../data/iris.data', 50, 80)
 
         test_data1, correct_label1 = load_data.load_test_data(
             'iris.data', type_num, 80, 150, dim=dim)
@@ -75,7 +75,7 @@ def adjust_param():
         test_data = np.vstack((test_data1, test_data2))
         correct_label = np.hstack((correct_label1, correct_label2))
     elif type_num == 2:
-        train_data = load_data.load_train_data('iris.data', 100, 130, dim=dim)
+        train_data = load_data.load_train_data('../data/iris.data', 100, 130, dim=dim)
 
         test_data1, correct_label1 = load_data.load_test_data(
             'iris.data', type_num, 130, 150, dim=dim)
